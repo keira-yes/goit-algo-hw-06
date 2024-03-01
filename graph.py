@@ -30,9 +30,10 @@ for node in G.nodes():
     print(f"{node}: {G.degree[node]}")
 
 # Запуск алгоритмів BFS та DFS
-start = 'Харків'   
-bfs_path = bfs(graph, start)
-dfs_path = dfs(graph, start)
+start_vertex = 'Харків'
 
-print("Шлях, знайдений за допомогою BFS:", bfs_path)
-print("Шлях, знайдений за допомогою DFS:", dfs_path)
+print("Шлях, знайдений за допомогою BFS:")
+bfs(graph, start_vertex)
+print()
+print("Шлях, знайдений за допомогою DFS:")
+dfs(graph, start_vertex)
