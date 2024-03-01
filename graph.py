@@ -1,5 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+from bfs import bfs
+from dfs import dfs
 
 # Представлення графа за допомогою списку суміжності
 graph = {
@@ -26,3 +28,11 @@ print("Кількість ребер:", G.number_of_edges())
 print("Ступінь вершин:")
 for node in G.nodes():
     print(f"{node}: {G.degree[node]}")
+
+# Запуск алгоритмів BFS та DFS
+start = 'Харків'   
+bfs_path = bfs(graph, start)
+dfs_path = dfs(graph, start)
+
+print("Шлях, знайдений за допомогою BFS:", bfs_path)
+print("Шлях, знайдений за допомогою DFS:", dfs_path)
